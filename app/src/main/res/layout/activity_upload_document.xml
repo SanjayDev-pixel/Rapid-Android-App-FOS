@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_10">
+
+        <TextView
+            android:id="@+id/tvSectionName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/heading_background"
+            android:text="@string/kyc"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/fields_margin"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:baselineAligned="true"
+            android:orientation="horizontal">
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/spinnerDocumentType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="@dimen/text_min_width"
+                app:ms_arrowColor="@color/black"
+                android:textSize="@dimen/text_size"
+                app:ms_arrowSize="@dimen/arrow_size"
+                app:ms_floatingLabelColor="@color/hint_color"
+                app:ms_floatingLabelText="Document Type "
+                app:ms_hint="Document Type "
+                app:ms_hintColor="@color/hint_color"
+                app:ms_hintTextSize="@dimen/hint_size"
+                app:ms_multiline="false" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_document_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:layout_weight="1"
+                android:textColorHint="@color/hint_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDocumentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="16"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:hint="@string/document_name"
+                    android:minWidth="200dp"
+                    app:ms_hintTextSize="@dimen/hint_size" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="true"
+            android:layout_marginTop="@dimen/fields_margin"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivUploadForm"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50sp"
+                android:layout_gravity="center"
+                android:src="@drawable/upload_icon" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="100sp"
+                android:layout_weight="1"
+                android:background="@drawable/layout_border_left"
+                android:baselineAligned="true"
+                android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivThumbnail"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/ivPdf"
+                android:layout_width="match_parent"
+                android:src="@drawable/ic_pdf_type"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnUpload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_50"
+
+            android:layout_gravity="center"
+            android:text="@string/upload"
+            android:textColor="@color/white"
+           />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcApplicants"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</layout>

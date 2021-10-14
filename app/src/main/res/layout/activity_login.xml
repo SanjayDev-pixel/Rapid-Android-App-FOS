@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        android:padding="@dimen/_35sdp">
+        <ImageView
+            android:id="@+id/ivAppLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="150sp"
+            android:layout_marginTop="@dimen/margin_50"
+            android:src="@drawable/app_logo" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/hint_color"
+            android:layout_marginTop="@dimen/margin_20">
+
+            <com.finance.app.view.utils.EditTexNormal
+                android:id="@+id/etUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:maxLength="100"
+                android:hint="@string/user_name"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/hint_color"
+            android:layout_marginTop="@dimen/margin_20">
+            <com.finance.app.view.utils.EditTexNormal
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:inputType="textWebPassword"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:maxLength="50"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="@dimen/margin_20"
+            android:text="@string/login"
+            android:textColor="@color/white" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.finance.app.view.utils.TextViewBold
+                android:id="@+id/tvForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_password"
+                android:textColor="@color/black_242424"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_weight="1"/>
+
+            <com.finance.app.view.utils.TextViewBold
+                android:id="@+id/tvregister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_weight="1"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.finance.app.view.utils.TextViewNormal
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtVersion"
+        android:text="Version"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/grey_585858"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_above="@+id/copyright"
+        android:gravity="center"
+      />
+
+    <com.finance.app.view.utils.TextViewNormal
+        android:id="@+id/copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/copyright"
+        android:drawableLeft="@drawable/ic_copyright"
+        android:textSize="14sp"
+        android:textColor="@color/grey_585858"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        />
+</RelativeLayout>
+</layout>

@@ -1,0 +1,234 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+//apply plugin: 'io.fabric'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    flavorDimensions("1.0")
+    defaultConfig {
+        applicationId "com.finance.app"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    aaptOptions {
+        cruncherEnabled = false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            //versionNameSuffix = '-debug'
+            //applicationIdSuffix = '.debug'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    kapt {
+        useBuildCache = true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/rxjava.properties'
+        exclude 'typedefs.txt'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    productFlavors {
+        optcrm {
+            dimension = '1.0'
+            minSdkVersion '19'
+            targetSdkVersion '29'
+        }
+    }
+    defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath false
+            }
+        }
+    }
+}
+
+configurations {
+    all*.exclude group: 'com.android.support', module: 'support-v13'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Android Architecture Components - LifeCycle + Room
+
+
+    // ViewModel and LiveData
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.room:room-runtime:2.0.0'
+    kapt 'androidx.room:room-compiler:2.0.0'
+
+    // optional - RxJava support for Room
+    implementation 'androidx.room:room-rxjava2:2.0.0'
+
+    // if you want some benefits from Kotlin then try this
+    implementation 'android.arch.work:work-runtime-ktx:1.0.0'
+
+    // Android Support Libraries
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+
+    // CardView
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    // Support v4 926kb
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // Design lib
+    implementation 'com.google.android.material:material:1.0.0'
+
+    // recycler View 29kb
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+    // Palette
+    implementation 'androidx.palette:palette:1.0.0'
+
+    // Custom Chrome Tab
+    implementation 'androidx.browser:browser:1.0.0'
+
+    // Dagger Dependency
+    implementation 'com.google.dagger:dagger:2.12'
+    kapt 'com.google.dagger:dagger-compiler:2.12'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'com.google.code.gson:gson:2.8.0'
+
+    // co-routines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1'
+
+    // Rx Java
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
+
+    // Rx Android
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+
+    // Rx Binding
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+
+    // circular imageView
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    // Loggin Interceptor
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+
+    // Glide - Image Loading
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    // Density Librarysdp
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    // Event Bus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    // Permission Library
+    implementation 'com.afollestad:assent:0.2.5'
+
+    // Text Drawable
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+
+    //Circle Image View
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    //navigation component
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.0.0-rc02'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.0.0-rc02'
+    implementation 'com.github.aakira:expandable-layout:1.6.0@aar'
+
+    // material spinner
+    implementation 'com.github.ganfra:material-spinner:2.0.0'
+
+    //otpLayout
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.0.3'
+
+    //Swipe to refresh
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+    //pager Indicator
+
+    implementation 'com.github.chahine:pageindicator:0.2.8'
+
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.7"
+
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:1.1.0'
+
+    //otp edittext
+    implementation('com.alimuzaffar.lib:pinentryedittext:2.0.6') {
+        exclude group: 'androidx.appcompat', module: 'appcompat'
+    }
+
+    //Mp-Chart Library
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    //analytics
+    implementation 'com.google.firebase:firebase-analytics:17.3.0'
+
+    // Add the Firebase SDK for Crashlytics.
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.0-beta04'
+
+    // Add the Firebase messaging.
+    implementation 'com.google.firebase:firebase-messaging:20.1.5'
+    implementation 'com.google.firebase:firebase-auth:19.3.0'
+    implementation 'com.google.firebase:firebase-core:17.3.0'
+
+    //QR CODE LIBRARY Added BY Sanjay
+    implementation 'com.journeyapps:zxing-android-embedded:2.0.1@aar'
+    implementation 'com.journeyapps:zxing-android-legacy:2.0.1@aar'
+    implementation 'com.journeyapps:zxing-android-integration:2.0.1@aar'
+    implementation  'com.google.zxing:core:3.0.1'
+
+    //Location API
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+   implementation 'com.otaliastudios:cameraview:2.0.0-rc1'
+    //map
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+
+}

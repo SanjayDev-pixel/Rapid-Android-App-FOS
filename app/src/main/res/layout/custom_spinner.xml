@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/spinnerType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/text_min_width"
+            android:textSize="@dimen/button_text_size"
+            app:ms_arrowColor="@color/black"
+            android:theme="@style/MatchSpinnerTheme"
+            app:ms_arrowSize="16dp"
+            app:ms_floatingLabelColor="@color/hint_color"
+            app:ms_hintColor="@color/hint_color"
+            app:ms_hintTextSize="@dimen/hint_size"
+            app:ms_multiline="false" />
+
+        <LinearLayout
+            android:id="@+id/llErrorBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_half_vertical_margin"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvErrorText"
+                android:layout_width="match_parent"
+                android:text="@string/mandatory_field_missing"
+                android:layout_height="wrap_content"
+                android:textColor="@color/error_text" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView xmlns:app="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="2dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_10">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Task Detail"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+                <include layout="@layout/line_seperator" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Created By : " />
+
+                    <TextView
+                        android:id="@+id/tvCreatedBy"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gaman Walia " />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="Updated On : " />
+
+                    <TextView
+                        android:id="@+id/tvUpdatedOn"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="25-8-19" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvTaskDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Actual Task Detail kabjvkbajdv kadhfkjhdfk akjdfhkda k  bjfbajlfb b fjkaf jh fkjavkfva kvc akv cakv."
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textSize="@dimen/text_size" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:gravity="start"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:text="Current Status : "
+                            android:textSize="@dimen/text_size" />
+
+                        <TextView
+                            android:id="@+id/tvTaskStatus"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Pending" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:gravity="end"
+                        android:layout_weight="1"
+                        android:layout_gravity="end"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/text_size"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="Type : " />
+
+                        <TextView
+                            android:id="@+id/tvTaskType"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Document Missing" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:gravity="start"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:text="Assignee : "
+                            android:textSize="@dimen/text_size" />
+
+                        <TextView
+                            android:id="@+id/tvAssignee"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Ankit Shah" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:gravity="end"
+                        android:layout_weight="1"
+                        android:layout_gravity="end"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/text_size"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="Accountable : " />
+
+                        <TextView
+                            android:id="@+id/tvAccountable"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gaman Walia" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/line_seperator" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Document to be collected"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/rcTasks"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_remarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRemarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Remarks"
+                        android:minWidth="200dp"
+                        app:ms_hintTextSize="@dimen/hint_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:baselineAligned="false"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:id="@+id/spinnerChangeStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minWidth="@dimen/text_min_width"
+                        app:ms_arrowColor="@color/black"
+                        app:ms_arrowSize="@dimen/arrow_size"
+                        app:ms_floatingLabelColor="@color/hint_color"
+                        app:ms_floatingLabelText="Change Status "
+                        app:ms_hint="Change Status "
+                        app:ms_hintColor="@color/hint_color"
+                        app:ms_hintTextSize="@dimen/hint_size"
+                        app:ms_multiline="false" />
+
+                    <Button
+                        android:id="@+id/btnUpdateTask"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:padding="5sp"
+                        android:background="@drawable/button_theme_style"
+                        android:text="Update Task"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</layout>

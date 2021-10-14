@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TableLayout
+                    android:id="@+id/table1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:background="#0397d5"
+                            android:gravity="center"
+                            android:text="S.No"
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:background="#0397d5"
+                            android:gravity="center"
+                            android:text="Name"
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:background="#0397d5"
+                            android:gravity="center"
+                            android:text="Contact No"
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:background="#0397d5"
+                            android:gravity="center"
+                            android:text="Relaton"
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:background="#0397d5"
+                            android:gravity="center"
+                            android:text="Known Since(in Yrs)"
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:background="#0397d5"
+                            android:gravity="center"
+                            android:text="Occupation"
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:background="#0397d5"
+                            android:gravity="center"
+                            android:text="Action"
+                            android:textColor="#000" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:gravity="center"
+                            android:text="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="-" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="-" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="-" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Business" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:src="@drawable/delete"
+                            android:text="NO" />
+
+
+                    </TableRow>
+
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:gravity="center"
+                            android:text="2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="-" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="-" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="-" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="15" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Business" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:src="@drawable/delete" />
+                    </TableRow>
+
+
+                    <TableRow>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:gravity="center"
+                            android:text="3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="-" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="-" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="-" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="05" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Business" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1sp"
+                            android:layout_marginBottom="1sp"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:src="@drawable/delete" />
+                    </TableRow>
+
+                </TableLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+</layout>

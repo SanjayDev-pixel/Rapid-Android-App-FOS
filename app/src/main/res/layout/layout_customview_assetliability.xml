@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_bkg"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_assetdetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/asset_detail"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/black_242424"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/assetcounter"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/tv_assetdetail"
+                    android:background="@drawable/blue_circle"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text_size" />
+
+                <ImageView
+                    android:id="@+id/addasset"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_add_box_black_24dp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/md_grey_500" />
+
+            <LinearLayout
+                android:id="@+id/llAssetDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcAsset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone" />
+
+               <!-- <com.chahinem.pageindicator.PageIndicator
+                    android:id="@+id/pageIndicatorAsset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />-->
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/layoutCreditCard"
+                layout="@layout/layout_credit_card_details" />
+
+
+            <include
+                android:id="@+id/layoutObligations"
+                layout="@layout/layout_obligation" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_50"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btnPrevious"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin20dp"
+                    android:background="@color/md_grey_500"
+                    android:text="@string/previous"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text_size" />
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="@dimen/margin20dp"
+                    android:background="@color/md_applicant_blue"
+                    android:text="Save"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text_size" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

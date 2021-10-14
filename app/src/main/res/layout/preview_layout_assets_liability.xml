@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_grey_100"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fields_margin"
+            android:orientation="horizontal">
+
+            <com.finance.app.view.utils.TextViewBold
+                android:id="@+id/tvCoApplicant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:text="@string/applicant"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textSize="@dimen/margin_20"
+                 />
+
+            <ImageView
+                android:id="@+id/expandForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:src="@drawable/ic_arrow_drop_down"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/collapseForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:rotation="180"
+                android:src="@drawable/ic_arrow_drop_down" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/cardApplicant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.finance.app.view.utils.TextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/preivew_assets_list"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="@dimen/margin_20"
+                    android:paddingLeft="@dimen/margin5dp"
+                    android:background="@color/app_bkg"
+                    android:textColor="@color/black"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcAssetLiability"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:clipToPadding="false"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <com.finance.app.view.utils.TextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:text="@string/preview_card_data_list"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="@dimen/margin_20"
+
+                    android:paddingLeft="@dimen/margin5dp"
+                    android:background="@color/app_bkg"
+                    android:textColor="@color/black"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:clipToPadding="false"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <com.finance.app.view.utils.TextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:text="@string/preview_obligations_list"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="@dimen/margin_20"
+                    android:paddingLeft="@dimen/margin5dp"
+                    android:background="@color/app_bkg"
+                    android:textColor="@color/black"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcObligations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:clipToPadding="false"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/selfie_instructions_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <TextView android:id="@+id/selfie_instructions_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/selfie_instructions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/SubheadingFontStyle"/>
+    <ImageView android:id="@+id/light_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_22sdp"
+        android:src="@drawable/ic_light_svg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selfie_instructions_tv"/>
+    <TextView android:id="@+id/light_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bright_light"
+        android:layout_marginStart="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/light_iv"
+        app:layout_constraintStart_toEndOf="@+id/light_iv"
+        app:layout_constraintTop_toTopOf="@+id/light_iv"
+        style="@style/ParagraphOneFontStyle"/>
+    <ImageView android:id="@+id/hat_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_22sdp"
+        android:src="@drawable/ic_hat_svg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/light_tv"
+        app:layout_constraintTop_toBottomOf="@+id/selfie_instructions_tv"/>
+    <TextView android:id="@+id/hat_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_hat"
+        android:layout_marginStart="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/hat_iv"
+        app:layout_constraintStart_toEndOf="@+id/hat_iv"
+        app:layout_constraintTop_toTopOf="@+id/hat_iv"
+        style="@style/ParagraphOneFontStyle"/>
+    <ImageView android:id="@+id/glasses_iv"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_22sdp" android:src="@drawable/ic_glasses_svg" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/hat_tv"/>
+    <TextView android:id="@+id/glasses_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_glasses" android:layout_marginStart="@dimen/_16sdp" app:layout_constraintBottom_toBottomOf="@+id/glasses_iv" app:layout_constraintStart_toEndOf="@+id/glasses_iv" app:layout_constraintTop_toBottomOf="@+id/light_tv" app:layout_constraintTop_toTopOf="@+id/glasses_iv" style="@style/ParagraphOneFontStyle"/>
+    <ImageView android:id="@+id/blur_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_22sdp" android:src="@drawable/ic_blur_svg" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@+id/glasses_tv" app:layout_constraintTop_toBottomOf="@+id/hat_iv"/>
+    <TextView android:id="@+id/blur_tv" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/no_blur" android:layout_marginStart="@dimen/_16sdp" app:layout_constraintBottom_toBottomOf="@+id/blur_iv" app:layout_constraintStart_toEndOf="@+id/blur_iv" app:layout_constraintTop_toBottomOf="@+id/hat_tv" app:layout_constraintTop_toTopOf="@+id/blur_iv" style="@style/ParagraphOneFontStyle"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

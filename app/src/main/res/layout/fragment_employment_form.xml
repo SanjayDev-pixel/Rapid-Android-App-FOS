@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_bkg">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/vwIncomeNotConsider"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            app:cardCornerRadius="5dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="10dp"
+            tools:visibility="visible">
+
+            <com.finance.app.view.utils.TextViewNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Income is not considered for this applicant."
+                android:textSize="21sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:id="@+id/vwIncomeConsider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:paddingBottom="30dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_10">
+
+                <com.finance.app.view.utils.TextViewBold
+                    android:id="@+id/tvEmployment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/app_bkg"
+                    android:text="@string/employment"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnUploadEmployment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_margin="10dp"
+                    android:background="@color/colorPrimary"
+                    android:drawableLeft="@drawable/ic_file_upload_white_24dp"
+                    android:drawablePadding="10dp"
+                    android:padding="5sp"
+                    android:text="Income Proof"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:alpha=".75"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:orientation="horizontal">
+
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:id="@+id/spinnerProfile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="Profile Segment *"
+                        app:ms_hint="Profile Segment *"
+                        app:ms_arrowColor="@color/black"
+                        app:ms_arrowSize="16dp"
+                        app:ms_floatingLabelColor="@color/hint_color"
+                        app:ms_hintColor="@color/hint_color"
+                        app:ms_hintTextSize="@dimen/hint_size"
+                        android:theme="@style/MatchSpinnerTheme"/>
+
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:id="@+id/spinnerSubProfile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="Sub-Profile *"
+                        app:ms_hint="Sub-Profile *"
+                        app:ms_arrowColor="@color/black"
+                        app:ms_arrowSize="16dp"
+                        app:ms_floatingLabelColor="@color/hint_color"
+                        app:ms_hintColor="@color/hint_color"
+                        app:ms_hintTextSize="@dimen/hint_size"
+                        android:theme="@style/MatchSpinnerTheme"/>
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/lytSalaryDetail"
+                    layout="@layout/layout_salary"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <include
+                    android:id="@+id/lytBusinessDetail"
+                    layout="@layout/layout_senp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+</layout>

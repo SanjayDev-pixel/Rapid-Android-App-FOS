@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1023339075698",
+    "firebase_url": "https://dmi-rapid.firebaseio.com",
+    "project_id": "dmi-rapid",
+    "storage_bucket": "dmi-rapid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023339075698:android:9d003ed0d09c32b1a14aeb",
+        "android_client_info": {
+          "package_name": "com.finance.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023339075698-vfvqd1k534t33jjbvd7fqs1jaa3c1hkr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7PZ5aPuWvLqQthRXsiCjWbqSEWdARk0U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023339075698-vfvqd1k534t33jjbvd7fqs1jaa3c1hkr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

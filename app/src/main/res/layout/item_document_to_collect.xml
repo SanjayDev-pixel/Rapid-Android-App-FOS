@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/margin_10"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iconTask"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/margin_10"
+            android:src="@drawable/ic_task" />
+
+        <ImageView
+            android:id="@+id/ivUpload"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/margin_10"
+            android:src="@drawable/upload_icon" />
+
+        <ImageView
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/margin_10"
+            android:src="@drawable/upload_icon"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/fields_margin"
+            android:layout_toEndOf="@id/iconTask"
+            android:baselineAligned="false"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTaskType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Date Of Birth Proof"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ivTaskStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:src="@drawable/pending" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTaskIssue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Print Not Clear"
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

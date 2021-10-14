@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.finance.app.view.utils.TextViewNormal
+            android:id="@+id/deviationheading_text"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/md_grey_200"
+            android:text="Technical"
+            android:gravity="left|center"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/margin10dp" />
+
+        <com.finance.app.view.utils.TextViewNormal
+            android:id="@+id/deviationtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="Property/Residence"
+            android:gravity="left|center"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/black"
+            android:paddingLeft="@dimen/margin10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:padding="@dimen/margin10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <com.finance.app.view.utils.TextViewNormal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/approval_auth"
+                    android:layout_margin="@dimen/margin5dp"
+                    android:textSize="@dimen/text_size" />
+
+                <com.finance.app.view.utils.TextViewNormal
+                    android:id="@+id/approval_authority"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CEO"
+                    android:layout_margin="@dimen/margin5dp"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <com.finance.app.view.utils.TextViewNormal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mitigating_factor"
+                    android:layout_margin="@dimen/margin5dp"
+                    android:textSize="@dimen/text_size" />
+
+                <com.finance.app.view.utils.TextViewNormal
+                    android:id="@+id/migrationfact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="xxxxx"
+                    android:layout_margin="@dimen/margin5dp"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</layout>

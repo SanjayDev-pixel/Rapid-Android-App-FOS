@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:src="@drawable/ic_camera"
+                android:tint="@color/black" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:id="@+id/linearCustomerStatus"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvActivitylabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="Customer Status :"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvActivityText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:gravity="start"
+                    android:text="****"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:id="@+id/linaerLeadType"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvLeadTypelabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="Lead Type :"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvLeadTypeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:gravity="start"
+                    android:text="****"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:id="@+id/linearTimingMeetingDate"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvFollowUpTimingLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="Follow Up Timing :"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvFollowUpTimingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:gravity="start"
+                    android:text="****"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:id="@+id/linearMessage"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvMessageLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="Message :"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvMessageText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:gravity="start"
+                    android:text="****"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:id="@+id/linearLeadCloseReason"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvLeadCloseLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="Lead Close Reason :"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvLeadCloseText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:gravity="start"
+                    android:text="****"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/line_seperator" />
+    </LinearLayout>
+</layout>

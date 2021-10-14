@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/linearChildView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.finance.app.view.utils.TextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_bkg"
+                android:text="@string/basic_details"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/llBasicDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etFirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/first_name"
+                        android:inputType="textCapWords"
+                        android:minWidth="200dp"
+                        android:singleLine="true"
+                        app:ms_hintTextSize="@dimen/hint_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_middle_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etMiddleName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/middle_name"
+                        android:inputType="textCapWords"
+                        android:minWidth="200dp"
+                        android:singleLine="true"
+                        app:ms_hintTextSize="@dimen/hint_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/last_name"
+                        android:inputType="textCapWords"
+                        android:minWidth="200dp"
+                        android:singleLine="true"
+                        app:ms_hintTextSize="@dimen/hint_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnUploadProfileImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorPrimary"
+                    android:drawableLeft="@drawable/ic_file_upload_white_24dp"
+                    android:drawablePadding="10dp"
+                    android:padding="5sp"
+                    android:text="Applicant Pic"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:alpha="0.75"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:baselineAligned="true"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_dob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textColorHint="@color/hint_color">
+
+                        <com.finance.app.view.utils.EditTexNormal
+                            android:id="@+id/etDOB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_calender"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="@string/dob"
+                            android:minWidth="200dp"
+                            app:ms_hintTextSize="@dimen/hint_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textColorHint="@color/hint_color">
+
+                        <com.finance.app.view.utils.EditTexNormal
+                            android:id="@+id/etAge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:hint="@string/age"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:minWidth="200dp"
+                            app:ms_hintTextSize="@dimen/hint_size"
+                            tools:editable="false" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearDOBProofView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layoutDobProof"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <Button
+                        android:id="@+id/btnUploadDob"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:alpha=".75"
+                        android:drawableLeft="@drawable/ic_file_upload_white_24dp"
+                        android:drawablePadding="10dp"
+                        android:padding="5sp"
+                        android:text="DOB Proof"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/hint_color"
+                        android:layout_weight="1">
+
+                        <com.finance.app.view.utils.EditTexNormal
+                            android:id="@+id/etMobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/mobile"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:minWidth="160dp"
+                            android:singleLine="true"
+                            app:ms_hintTextSize="@dimen/hint_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <Button
+                        android:id="@+id/btnGetOTP"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50sp"
+                        android:background="@color/app_bkg"
+                        android:paddingStart="@dimen/margin_10"
+                        android:paddingEnd="@dimen/margin_10"
+                        android:text="@string/get_otp"
+                        android:visibility="visible"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/button_text_size"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:id="@+id/ivVerifiedStatus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/verified_icon"
+                        android:textSize="@dimen/button_text_size"
+                        android:visibility="gone"
+                        android:layout_marginRight="@dimen/margin20dp"/>
+
+                    <TextView
+                        android:id="@+id/mobileverified_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email_id"
+                        android:inputType="textWebEmailAddress"
+                        android:minWidth="200dp"
+                        android:singleLine="true"
+                        app:ms_hintTextSize="@dimen/hint_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:baselineAligned="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layoutGender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutNationality"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:baselineAligned="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layoutReligion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutCaste"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutQualification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:baselineAligned="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layoutDetailQualification"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutMaritalStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_father_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etFatherFirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/father_s_first_name"
+                        android:minWidth="200dp"
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        app:ms_hintTextSize="@dimen/hint_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_father_middle_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etFatherMiddleName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/father_middle_name"
+                        android:inputType="text"
+                        android:minWidth="200dp"
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        app:ms_hintTextSize="@dimen/hint_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_father_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etFatherLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/father_last_name"
+                        android:inputType="text"
+                        android:minWidth="200dp"
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        app:ms_hintTextSize="@dimen/hint_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSpouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="true"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_spouse_first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fields_margin"
+                        android:textColorHint="@color/hint_color">
+
+                        <com.finance.app.view.utils.EditTexNormal
+                            android:id="@+id/etSpouseFirstName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/spouse_first_name"
+                            android:inputType="text"
+                            android:minWidth="200dp"
+                            android:singleLine="true"
+                            android:textAllCaps="true"
+                            app:ms_hintTextSize="@dimen/hint_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_spouse_middle_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fields_margin"
+                        android:textColorHint="@color/hint_color">
+
+                        <com.finance.app.view.utils.EditTexNormal
+                            android:id="@+id/etSpouseMiddleName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/spouse_middle_name"
+                            android:inputType="text"
+                            android:minWidth="200dp"
+                            android:singleLine="true"
+                            android:textAllCaps="true"
+                            app:ms_hintTextSize="@dimen/hint_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fields_margin"
+                        android:textColorHint="@color/hint_color">
+
+                        <com.finance.app.view.utils.EditTexNormal
+                            android:id="@+id/etSpouseLastName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/spouse_last_name"
+                            android:inputType="text"
+                            android:minWidth="200dp"
+                            android:singleLine="true"
+                            android:textAllCaps="true"
+                            app:ms_hintTextSize="@dimen/hint_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:baselineAligned="true"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_alternate_num"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/hint_color">
+
+                        <com.finance.app.view.utils.EditTexNormal
+                            android:id="@+id/etAlternateNum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/alternate_contact_no"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:minWidth="200dp"
+                            android:singleLine="true"
+                            app:ms_hintTextSize="@dimen/hint_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_no_of_dependent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/hint_color">
+
+                        <com.finance.app.view.utils.EditTexNormal
+                            android:id="@+id/etNumOfDependent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/number_of_dependent"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:minWidth="200dp"
+                            android:singleLine="true"
+                            app:ms_hintTextSize="@dimen/hint_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_noOffamilymembers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etNoOffamilymembers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/number_of_family_members"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:minWidth="200dp"
+                        android:singleLine="true"
+                        app:ms_hintTextSize="@dimen/hint_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_no_of_earning_members"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etNumOfEarningMember"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/number_of_earning_members"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:minWidth="200dp"
+                        android:singleLine="true"
+                        app:ms_hintTextSize="@dimen/hint_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:baselineAligned="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layoutLivingStandard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutRelationShip"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbIncomeConsidered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:padding="@dimen/margin_10"
+                    android:text="@string/income_considered"
+                    android:textSize="@dimen/button_text_size" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin10dp">
+
+        <ImageView
+            android:id="@+id/cancel_bttn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_close_black_48dp" />
+
+        <com.finance.app.view.utils.TextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/credit_card_details"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+           />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/margin10dp">
+
+
+    <!--<fr.ganfra.materialspinner.MaterialSpinner
+        android:id="@+id/spinnerBankName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/text_min_width"
+        app:ms_arrowColor="@color/black"
+        android:textSize="@dimen/text_size"
+        app:ms_arrowSize="16dp"
+        app:ms_floatingLabelColor="@color/hint_color"
+        app:ms_floatingLabelText="Bank Name* "
+        app:ms_hint="Bank Name* "
+        app:ms_hintColor="@color/hint_color"
+        app:ms_hintTextSize="@dimen/hint_size"
+        app:ms_multiline="false"
+        android:layout_marginTop="@dimen/margin20dp"/>-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fields_margin"
+            android:hint="Bank Name *"
+            android:minWidth="@dimen/text_min_width"
+            android:textColorHint="@color/grey_585858">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/spinnerBankName"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_credit_card_limit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/hint_color"
+        android:layout_marginTop="@dimen/margin20dp">
+
+        <com.finance.app.view.utils.EditTexNormal
+            android:id="@+id/etCreditCardLimit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="number"
+            android:maxLength="7"
+            android:hint="@string/credit_card_limit"
+            android:minWidth="200dp"
+            android:textSize="@dimen/text_size" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_current_utilization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/hint_color"
+        android:layout_marginTop="@dimen/margin20dp">
+
+        <com.finance.app.view.utils.EditTexNormal
+            android:id="@+id/etCurrentUtilization"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/current_utilization"
+            android:singleLine="true"
+            android:inputType="number"
+            android:maxLength="7"
+            android:minWidth="200dp"
+            android:textSize="@dimen/text_size" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <fr.ganfra.materialspinner.MaterialSpinner
+        android:id="@+id/spinnerObligate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/text_min_width"
+        app:ms_arrowColor="@color/black"
+        app:ms_arrowSize="@dimen/text_size"
+        app:ms_floatingLabelColor="@color/hint_color"
+        app:ms_floatingLabelText="Obligate* "
+        android:textSize="@dimen/text_size"
+        app:ms_hint="Obligate* "
+        app:ms_hintColor="@color/hint_color"
+        app:ms_hintTextSize="@dimen/hint_size"
+        app:ms_multiline="false"
+        android:layout_marginTop="@dimen/margin20dp"
+        android:theme="@style/MatchSpinnerTheme"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_last_payment_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin20dp"
+        android:textColorHint="@color/hint_color">
+
+        <com.finance.app.view.utils.EditTexNormal
+            android:id="@+id/etLastPaymentDate"
+            android:layout_width="match_parent"
+            android:editable="false"
+            android:focusable="false"
+            android:drawableEnd="@drawable/ic_calender"
+            android:layout_height="wrap_content"
+            android:hint="@string/last_payment_date"
+            android:minWidth="200dp"
+            android:textSize="@dimen/text_size" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnAddcrdetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button_text_size"
+        android:layout_marginTop="@dimen/margin20dp"
+        android:layout_marginBottom="@dimen/margin10dp"/>
+    </LinearLayout>
+
+</LinearLayout>
+</layout>

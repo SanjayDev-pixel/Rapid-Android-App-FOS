@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_100"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/backbttn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:drawableLeft="@drawable/ic_arrow_back_white_24dp"
+            android:padding="@dimen/margin10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_10">
+
+            <LinearLayout
+                android:id="@+id/llLeadNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:orientation="horizontal">
+
+                <com.finance.app.view.utils.TextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:text="@string/lead_number"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text_size"
+                    />
+
+                <com.finance.app.view.utils.TextViewBold
+                    android:id="@+id/tvLeadNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:text="@string/lead_number"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text_size"
+                     />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llApplicantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llLeadNum"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:text="@string/applicant_name"
+                    android:visibility="gone"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size" />
+
+                <com.finance.app.view.utils.TextViewNormal
+                    android:id="@+id/tvApplicantName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:text="@string/applicant_name"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/edit"
+                android:src="@drawable/ic_edit_grey"
+                android:tint="@color/white"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/llAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivEdit"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <com.finance.app.view.utils.TextViewNormal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:text="@string/amount"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size" />
+
+                <com.finance.app.view.utils.TextViewNormal
+                    android:id="@+id/tvAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:text="120000"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.chahinem.pageindicator.PageIndicator
+            android:id="@+id/pageIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="50sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/md_grey_100"
+                android:contentDescription="@string/previous"
+                android:rotation="180"
+                android:src="@drawable/ic_next_arrow"
+                android:visibility="gone" />
+
+            <com.finance.app.view.utils.TextViewBold
+                android:id="@+id/tvFormPage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/personal_inforamtion"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textSize="@dimen/margin_20"
+                 />
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/md_grey_100"
+                android:contentDescription="@string/next"
+                android:src="@drawable/ic_next_arrow" />
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/layoutSubmitlead"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <Button
+                android:id="@+id/btnCancel"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:alpha="0.75"
+                android:background="@drawable/background_blue"
+                android:text="@string/cancel"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/button_text_size" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:alpha="0.75"
+                android:autoLink="phone"
+                android:background="@color/colorAccent"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size" />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="gone"
+           android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+</layout>

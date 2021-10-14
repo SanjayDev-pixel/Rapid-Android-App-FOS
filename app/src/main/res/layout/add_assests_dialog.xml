@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:windowSoftInputMode="adjustResize">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10dp">
+            <ImageView
+                android:id="@+id/cancel_bttn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_close_black_48dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/asset_detail"
+                android:textColor="@color/black"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/spinnerAssetType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/text_min_width"
+            app:ms_arrowColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:ms_arrowSize="16dp"
+            app:ms_floatingLabelColor="@color/hint_color"
+            app:ms_floatingLabelText="Asset Type*"
+            app:ms_hint="Asset Type*"
+            app:ms_hintColor="@color/hint_color"
+            app:ms_hintTextSize="@dimen/hint_size"
+            app:ms_multiline="false"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_20"
+            android:theme="@style/MatchSpinnerTheme"/>
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/spinnerAssetSubType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/text_min_width"
+            app:ms_arrowColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:ms_arrowSize="16dp"
+            android:layout_marginStart="@dimen/margin_10"
+            app:ms_floatingLabelColor="@color/hint_color"
+            app:ms_floatingLabelText="Asset Sub Type*"
+            app:ms_hint="Asset Sub Type*"
+            app:ms_hintColor="@color/hint_color"
+            app:ms_hintTextSize="@dimen/hint_size"
+            app:ms_multiline="false"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            android:theme="@style/MatchSpinnerTheme"/>
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/spinnerOwnership"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/text_min_width"
+            app:ms_arrowColor="@color/black"
+            app:ms_arrowSize="16dp"
+            app:ms_floatingLabelColor="@color/hint_color"
+            app:ms_floatingLabelText="Ownership*"
+            android:textSize="@dimen/text_size"
+            app:ms_hint="Ownership*"
+            app:ms_hintColor="@color/hint_color"
+            app:ms_hintTextSize="@dimen/hint_size"
+            app:ms_multiline="false"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginStart="@dimen/margin_10"
+            android:theme="@style/MatchSpinnerTheme"/>
+
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/spinnerDocumentProof"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/text_min_width"
+            app:ms_arrowColor="@color/black"
+            app:ms_arrowSize="16dp"
+            app:ms_floatingLabelColor="@color/hint_color"
+            app:ms_floatingLabelText="Document Proof*"
+            app:ms_hint="Document Proof*"
+            android:textSize="@dimen/text_size"
+            app:ms_hintColor="@color/hint_color"
+            app:ms_hintTextSize="@dimen/hint_size"
+            app:ms_multiline="false"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:theme="@style/MatchSpinnerTheme"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:textColorHint="@color/hint_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/dropdown"
+                android:maxLength="10"
+                android:inputType="number"
+                android:minWidth="200dp"
+                android:textSize="@dimen/text_size" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnAddAsset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fields_margin"
+            android:text="@string/add"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size" />
+
+
+    </LinearLayout>
+</layout>

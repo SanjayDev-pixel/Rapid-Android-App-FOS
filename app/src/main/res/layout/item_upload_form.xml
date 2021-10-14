@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivFormImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_10"
+            android:src="@mipmap/boss" />
+
+        <ImageView
+            android:id="@+id/ivDeleteImage"
+            android:layout_width="@dimen/margin_20"
+            android:layout_height="@dimen/margin_20"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:tint="@color/md_red_500"
+            android:layout_margin="@dimen/margin_10"
+            android:src="@drawable/ic_vector_cross" />
+
+    </RelativeLayout>
+</layout>

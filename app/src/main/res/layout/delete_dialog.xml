@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangular_curved_bg_blue"
+    app:cardCornerRadius="5sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20sp">
+
+        <com.finance.app.view.utils.TextViewNormal
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Warning! Do you really want to delete this?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/button_text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/tvDeleteConfirm"
+                style="?attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20sp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="@string/yes"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size" />
+
+            <Button
+                android:id="@+id/tvDonotDelete"
+                style="?attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/gradient_black"
+                android:text="@string/no"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+

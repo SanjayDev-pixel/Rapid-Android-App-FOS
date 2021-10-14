@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.finance.app.view.utils.TextViewBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fields_margin"
+            android:background="@color/app_bkg"
+            android:text="@string/current_address"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnUploadAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:drawablePadding="10dp"
+            android:padding="5sp"
+            android:background="@color/colorPrimary"
+            android:drawableLeft="@drawable/ic_file_upload_white_24dp"
+            android:text="Address Proof"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:alpha=".75"/>
+
+        <LinearLayout
+            android:id="@+id/llCurrentAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:baselineAligned="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layoutCurrentResidenceType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/layoutCurrentAddressProof"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_weight="1"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_current_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:textColorHint="@color/hint_color">
+
+                <com.finance.app.view.utils.EditTexNormal
+                    android:id="@+id/etCurrentAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Current Address"
+                    android:inputType="textCapSentences"
+                    android:minWidth="200dp"
+                    android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceLarge" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_current_landmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:textColorHint="@color/hint_color">
+
+                <com.finance.app.view.utils.EditTexNormal
+                    android:id="@+id/etCurrentLandmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/landmark"
+                    android:inputType="textCapSentences"
+                    android:minWidth="200dp"
+                    android:singleLine="true"
+                    app:ms_hintTextSize="@dimen/hint_size" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:baselineAligned="true"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_current_rent_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etCurrentRentAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/rent_amount"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:minWidth="200dp"
+                        android:singleLine="true"
+                        app:ms_hintTextSize="@dimen/hint_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_current_staying"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etCurrentStaying"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/staying_in_years"
+                        android:inputType="numberDecimal"
+                        android:maxLength="4"
+                        android:minWidth="200dp"
+                        android:singleLine="true"
+                        app:ms_hintTextSize="@dimen/hint_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <com.finance.app.view.customViews.CustomZipAddressView
+                android:id="@+id/customCurrentZipAddressView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+        </LinearLayout>
+
+        <com.finance.app.view.utils.TextViewBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_bkg"
+            android:text="@string/permanent_address"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cbSameAsCurrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_10"
+            android:text="@string/same_as_current_address"
+            android:textSize="@dimen/button_text_size" />
+
+
+        <LinearLayout
+            android:id="@+id/llPermanentAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnUploadPermanentAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:drawableLeft="@drawable/ic_file_upload_white_24dp"
+                android:drawablePadding="10dp"
+                android:padding="5sp"
+                android:text="Address Proof"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:alpha=".75"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:baselineAligned="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layoutPermanentResidenceType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/layoutPermanentAddressProof"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_weight="1"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_permanent_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:textColorHint="@color/hint_color">
+
+                <com.finance.app.view.utils.EditTexNormal
+                    android:id="@+id/etPermanentAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/permanent_address"
+                    android:inputType="textCapSentences"
+                    android:minWidth="200dp"
+                    android:singleLine="true"
+                    app:ms_hintTextSize="@dimen/hint_size" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_permanent_landmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:textColorHint="@color/hint_color">
+
+                <com.finance.app.view.utils.EditTexNormal
+                    android:id="@+id/etPermanentLandmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/landmark"
+                    android:inputType="textCapSentences"
+                    android:minWidth="200dp"
+                    android:singleLine="true"
+                    app:ms_hintTextSize="@dimen/hint_size" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:baselineAligned="true"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_permanent_rent_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etPermanentRentAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/rent_amount"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:minWidth="200dp"
+                        android:singleLine="true"
+                        app:ms_hintTextSize="@dimen/hint_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_permanent_staying"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etPermanentStaying"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/staying_in_years"
+                        android:inputType="numberDecimal"
+                        android:maxLength="4"
+                        android:minWidth="200dp"
+                        android:singleLine="true"
+                        app:ms_hintTextSize="@dimen/hint_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.finance.app.view.customViews.CustomZipAddressView
+                android:id="@+id/customPermanentZipAddressView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

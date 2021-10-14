@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:minWidth="500dp"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_close_black_48dp" />
+
+            <com.finance.app.view.utils.TextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:text="Bank Detail"
+                android:textColor="@color/black"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fields_margin"
+            android:hint="Bank Name *"
+            android:minWidth="@dimen/text_min_width"
+            android:textColorHint="@color/grey_585858">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/actBankName"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        <fr.ganfra.materialspinner.MaterialSpinner-->
+        <!--            android:id="@+id/spinnerBankName"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="@dimen/fields_margin"-->
+        <!--            android:minWidth="@dimen/text_min_width"-->
+        <!--            android:textSize="@dimen/text_size"-->
+        <!--            android:theme="@style/MatchSpinnerTheme"-->
+        <!--            app:ms_arrowColor="@color/md_grey_500"-->
+        <!--            app:ms_arrowSize="16dp"-->
+        <!--            app:ms_floatingLabelColor="@color/grey_585858"-->
+        <!--            app:ms_floatingLabelText="Bank Name*"-->
+        <!--            app:ms_hint="Bank Name*"-->
+        <!--            app:ms_hintColor="@color/grey_585858"-->
+        <!--            app:ms_hintTextSize="@dimen/hint_size"-->
+        <!--            app:ms_multiline="false" />-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_account_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fields_margin"
+            android:textColorHint="@color/grey_585858">
+
+            <com.finance.app.view.utils.EditTexNormal
+                android:id="@+id/etAccountNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Account No."
+                android:inputType="number"
+                android:maxLength="18"
+                android:minWidth="200dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_account_holder_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fields_margin"
+            android:textColorHint="@color/grey_585858">
+
+            <com.finance.app.view.utils.EditTexNormal
+                android:id="@+id/etAccountHolderName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Account Holder Name"
+                android:minWidth="200dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/spinnerAccountType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/text_min_width"
+            android:textSize="@dimen/text_size"
+            android:theme="@style/MatchSpinnerTheme"
+            app:ms_arrowSize="16dp"
+            app:ms_floatingLabelColor="@color/grey_585858"
+            app:ms_floatingLabelText="Account Type*"
+            app:ms_hint="Account Type*"
+            app:ms_hintColor="@color/grey_585858"
+            app:ms_hintTextSize="@dimen/hint_size"
+            app:ms_multiline="false"
+            app:ms_arrowColor="@color/black"/>
+
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/spinnerSalaryCredit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/text_min_width"
+            android:textSize="@dimen/text_size"
+            android:theme="@style/MatchSpinnerTheme"
+            app:ms_arrowColor="@color/black"
+            app:ms_arrowSize="16dp"
+            app:ms_floatingLabelColor="@color/grey_585858"
+            app:ms_floatingLabelText="Salary Credit * "
+            app:ms_hint="Salary Credit * "
+            app:ms_hintColor="@color/grey_585858"
+            app:ms_hintTextSize="@dimen/hint_size"
+            app:ms_multiline="false" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_salary_credit_in_six_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fields_margin"
+            android:textColorHint="@color/grey_585858"
+            android:visibility="gone"
+            tools:visibility="invisible">
+
+            <com.finance.app.view.utils.EditTexNormal
+                android:id="@+id/etSalaryCreditedInSixMonths"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No. of Salary Credited In 6 months"
+                android:inputType="number"
+                android:digits="123456"
+                android:maxLength="1"
+                android:minWidth="200dp"
+                android:textSize="@dimen/text_size" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/fields_margin"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:text="@string/add" />
+
+
+    </LinearLayout>
+    </ScrollView>
+</layout>

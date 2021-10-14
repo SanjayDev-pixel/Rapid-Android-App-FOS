@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/group_lead_action"
+        android:visible="false"
+        app:showAsAction="collapseActionView">
+        <item
+            android:id="@+id/send_notification"
+            android:title="@string/send_notification" />
+        <item
+            android:id="@+id/send_sms"
+            android:title="@string/send_sms" />
+        <item
+            android:id="@+id/call_to_customers"
+            android:title="@string/call_to_customer" />
+    </group>
+
+    <!-- <item
+         android:id="@+id/search"
+         android:title="@string/search"
+         app:showAsAction="ifRoom"/>-->
+</menu>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:color="@color/colorPrimary"
+        android:duration="600" />
+    <item
+        android:color="@color/md_blue_100"
+        android:duration="600" />
+    <item
+        android:color="@color/md_blue_800"
+        android:duration="600" />
+    <item
+        android:color="@color/blue_spinner"
+        android:duration="600" />
+</animation-list>

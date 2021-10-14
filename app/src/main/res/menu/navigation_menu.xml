@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/dashboard"
+            android:title="@string/dashboard"
+            android:icon="@drawable/ic_dashboard" />
+        <item
+            android:id="@+id/assignedLeads"
+            android:icon="@drawable/ic_assigned_lead"
+            android:title="@string/assigned_leads" />
+
+        <item
+            android:id="@+id/createLead"
+            android:title="@string/create_lead"
+            android:icon="@drawable/ic_create_lead"
+
+            />
+
+        <item
+            android:id="@+id/notification"
+            android:icon="@drawable/ic_notification"
+            android:visible="false"
+            android:title="@string/notification" />
+
+        <item
+        android:id="@+id/Reports"
+        android:title="Status Check"
+        android:icon="@drawable/ic_assigned_lead" />
+
+        <item
+            android:id="@+id/EmployeeTracking"
+            android:title="Employee Tracking"
+            android:icon="@drawable/ic_assigned_lead" />
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout" />
+    </group>
+
+</menu>

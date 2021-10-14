@@ -1,0 +1,93 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbar_background_color"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/collapsingToolbar"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="snap">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbarMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        app:elevation="4dp"
+                        android:theme="@style/ToolbarColoredBackArrow"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"></androidx.appcompat.widget.Toolbar>
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/ic_faqs"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:id="@+id/faq"></ImageView>
+                </FrameLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/secondaryToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/margin_10">
+
+            <TextView
+                android:id="@+id/tvBackSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_vector_back"
+                android:drawablePadding="5sp"
+                android:gravity="center"
+                android:text="@string/back"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <com.finance.app.view.utils.TextViewBold
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/tvLeadNumber"
+                android:drawablePadding="@dimen/margin_20"
+                android:text="@string/lead_number" />
+
+            <com.finance.app.view.utils.TextViewBold
+                android:id="@+id/tvLeadNumber"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:drawablePadding="@dimen/margin_20"
+                android:text="12345" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llInflatorContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+</layout>

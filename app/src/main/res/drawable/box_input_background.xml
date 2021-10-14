@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <stroke android:width="@dimen/_1sdp"/>
+    <corners android:radius="@dimen/otp_box_radius"/>
+    <size android:height="@dimen/otp_box_size" android:width="@dimen/otp_box_size"/>
+    <solid android:color="@android:color/transparent"/>
+</shape>

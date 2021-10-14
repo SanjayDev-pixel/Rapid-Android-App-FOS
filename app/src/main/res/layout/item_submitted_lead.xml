@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="5sp"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardElevation="4sp"
+        card_view:cardUseCompatPadding="true"
+        android:id="@+id/leadCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/submitted_lead_view">
+
+            <LinearLayout
+                android:id="@+id/llName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_10">
+
+                    <TextView
+                        android:id="@+id/tvLeadName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Mr. Sachin Makhija"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:id="@+id/tvLeadAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:textColor="@color/black"
+                        android:text="L-14, Saket, South Delhi, Delhi - 110062"
+                        android:textSize="@dimen/small_text_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/margin_10">
+
+                    <TextView
+                        android:id="@+id/tvLeadStatus"
+                        android:layout_width="match_parent"
+                        android:drawablePadding="5sp"
+                        android:drawableStart="@drawable/submitted_lead_circle_drawable"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:text="New"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_size" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_10">
+
+                <TextView
+                    android:id="@+id/tvLoanType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_10"
+                    android:background="@drawable/oval_drawable_unselected"
+                    android:text="Type Of Loan:"
+                    android:textSize="@dimen/small_text_size" />
+
+                <TextView
+                    android:id="@+id/tvDateAndTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gradient_black"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/margin_10"
+                    android:drawablePadding="5sp"
+                    android:drawableStart="@drawable/ic_watch_later_black_24dp"
+                    android:textSize="@dimen/small_text_size"
+                    android:text="Date" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
+

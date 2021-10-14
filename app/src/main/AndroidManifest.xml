@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.finance.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name="motobeans.architecture.application.ArchitectureApp"
+        android:allowBackup="false"
+        android:fullBackupOnly="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="lollipop">
+        <activity android:name=".view.activity.EmployeeTrackingActivity"></activity>
+        <activity android:name=".view.activity.FaqActivity" /> <!-- <provider -->
+        <!-- android:name="androidx.core.content.FileProvider" -->
+        <!-- android:authorities="android.support.v4.content.FileProvider"> -->
+        <!-- <meta-data -->
+        <!-- android:name="android.support.FILE_PROVIDER_PATHS" -->
+        <!-- android:resource="@xml/file_paths" /> -->
+        <!-- </provider> -->
+        <service
+            android:name=".locationTracker.ForegroundLocationTrackerService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity android:name=".view.activity.DocumentUploadingActivity" />
+        <activity
+            android:name=".view.activity.KYCActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Report"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.FinalSubmitActivity"
+            android:label="@string/title_activity_final_submit"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.activity.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.ForgetPasswordActivity" />
+        <activity android:name=".view.activity.OtpVerifyActivity" />
+        <activity android:name=".view.activity.ResetPasswordActivity" />
+        <activity
+            android:name=".view.activity.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.SelfDeclarationUploadDocumentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.PerformKycDocumentUploadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.UploadedFormDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.LoanApplicationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.activity.AllLeadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.DashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.AddTaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.GenericTypeTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.LeadDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.UpdateCallActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.TaskDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.CreateLeadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.activity.UploadDocumentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.SetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".view.activity.SyncActivity" />
+        <activity android:name=".view.activity.TempActivityTest" />
+        <activity android:name=".view.activity.PreviewActivity" />
+        <activity
+            android:name=".view.activity.LoanSubmitStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.ApplicantKycListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".camera.CameraActivity"
+            android:configChanges="screenLayout|keyboardHidden"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name=".camera.PicturePreviewActivity"
+            android:label="Picture Preview" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key"/>
+    </application>
+
+</manifest>

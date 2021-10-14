@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llSenp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbAllEarningMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_10"
+                android:text="@string/all_earning_member"
+                android:textSize="@dimen/button_text_size" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_business_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:textColorHint="@color/hint_color">
+
+                <com.finance.app.view.utils.EditTexNormal
+                    android:id="@+id/etBusinessName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Business Name"
+                    android:minWidth="200dp"
+                    android:singleLine="true"
+                    app:ms_hintTextSize="@dimen/hint_size" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/spinnerConstitution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:orientation="vertical"
+                app:ms_enableFloatingLabel="true"
+                app:ms_floatingLabelText="Constitution *"
+                app:ms_hint="Constitution *"
+                app:ms_arrowColor="@color/black"
+                app:ms_arrowSize="16dp"
+                app:ms_floatingLabelColor="@color/hint_color"
+                app:ms_hintColor="@color/hint_color"
+                app:ms_hintTextSize="@dimen/hint_size"
+                android:theme="@style/MatchSpinnerTheme"/>
+
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/layoutConstitution"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="@dimen/fields_margin"-->
+            <!--                android:orientation="vertical" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <fr.ganfra.materialspinner.MaterialSpinner
+                    android:id="@+id/spinnerIndustry"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="7dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:ms_enableFloatingLabel="true"
+                    app:ms_floatingLabelText="Industry *"
+                    app:ms_hint="Industry *"
+                    app:ms_arrowColor="@color/black"
+                    app:ms_arrowSize="16dp"
+                    app:ms_floatingLabelColor="@color/hint_color"
+                    app:ms_hintColor="@color/hint_color"
+                    app:ms_hintTextSize="@dimen/hint_size"
+                    android:theme="@style/MatchSpinnerTheme"/>
+
+                <fr.ganfra.materialspinner.MaterialSpinner
+                    android:id="@+id/spinnerBusinessSetupType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:ms_enableFloatingLabel="true"
+                    app:ms_floatingLabelText="Business Setup Type *"
+                    app:ms_hint="Business Setup Type *"
+                    app:ms_arrowColor="@color/black"
+                    app:ms_arrowSize="16dp"
+                    app:ms_floatingLabelColor="@color/hint_color"
+                    app:ms_hintColor="@color/hint_color"
+                    app:ms_hintTextSize="@dimen/hint_size"
+                    android:theme="@style/MatchSpinnerTheme"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_gst_registration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:textColorHint="@color/hint_color">
+
+                <com.finance.app.view.utils.EditTexNormal
+                    android:id="@+id/etGstRegistration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="GST/VAT Registration "
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:minWidth="200dp"
+                    android:singleLine="true"
+                    app:ms_hintTextSize="@dimen/hint_size" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:baselineAligned="true"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_incorporation_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etIncorporationDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_calender"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="Incorporation Date"
+                        android:minWidth="150dp"
+                        android:textSize="@dimen/text_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_business_vintage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2sp"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etBusinessVintage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="Business Vintage(In Years)"
+                        android:minWidth="200dp"
+                        android:textSize="@dimen/text_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/layoutAddress"
+                layout="@layout/layout_employment_address" />
+
+            <com.finance.app.view.utils.TextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:text="@string/income"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/lytYearlyIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/lastCurrentIncome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:baselineAligned="true"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_last_year_income"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/hint_color">
+
+                        <com.finance.app.view.utils.EditTexNormal
+                            android:id="@+id/etLastYearIncome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Last Year Income"
+                            android:inputType="numberDecimal"
+                            android:maxLength="8"
+                            android:minWidth="150dp"
+                            android:singleLine="true"
+                            android:textSize="@dimen/text_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_current_year_income"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/hint_color">
+
+                        <com.finance.app.view.utils.EditTexNormal
+                            android:id="@+id/etCurrentYearIncome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Current Year Income"
+                            android:inputType="numberDecimal"
+                            android:maxLength="8"
+                            android:minWidth="200dp"
+                            android:singleLine="true"
+                            android:textSize="@dimen/text_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_average_monthly_income"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fields_margin"
+                    android:textColorHint="@color/hint_color">
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etAverageMonthlyIncome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:hint="@string/average_monthly_income"
+                        android:inputType="numberDecimal"
+                        android:maxLength="8"
+                        android:minWidth="200dp"
+                        android:singleLine="true"
+                        app:ms_hintTextSize="@dimen/hint_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_monthly_income"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:textColorHint="@color/hint_color"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <com.finance.app.view.utils.EditTexNormal
+                    android:id="@+id/etMonthlyIncome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Monthly Income"
+                    android:inputType="numberDecimal"
+                    android:maxLength="8"
+                    android:minWidth="200dp"
+                    android:singleLine="true"
+                    app:ms_hintTextSize="@dimen/hint_size" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

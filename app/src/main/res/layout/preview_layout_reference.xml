@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_grey_100"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fields_margin"
+            android:orientation="horizontal">
+
+            <com.finance.app.view.utils.TextViewBold
+                android:id="@+id/tvCoApplicant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:text="@string/applicant"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textSize="@dimen/margin_20"
+                 />
+
+            <ImageView
+                android:id="@+id/expandForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:src="@drawable/ic_arrow_drop_down"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/collapseForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:rotation="180"
+                android:src="@drawable/ic_arrow_drop_down" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardApplicant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:background="@color/white"
+                app:cardElevation="5dp"
+                app:cardMaxElevation="2dp"
+                card_view:cardCornerRadius="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.finance.app.view.utils.TextViewBold
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/preview_name"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/button_text_size"
+                             />
+
+                        <com.finance.app.view.utils.TextViewNormal
+                            android:id="@+id/tvName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <include layout="@layout/line_separator" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.finance.app.view.utils.TextViewBold
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/preview_relation"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/button_text_size"
+                             />
+
+                        <com.finance.app.view.utils.TextViewNormal
+                            android:id="@+id/tvRelation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <include layout="@layout/line_separator" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.finance.app.view.utils.TextViewBold
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/preview_occupation"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/button_text_size"
+                             />
+
+                        <com.finance.app.view.utils.TextViewNormal
+                            android:id="@+id/tvOccupation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <include layout="@layout/line_separator" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.finance.app.view.utils.TextViewBold
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/preview_known_since"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/button_text_size"
+                             />
+
+                        <com.finance.app.view.utils.TextViewNormal
+                            android:id="@+id/tvKnownSince"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <include layout="@layout/line_separator" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.finance.app.view.utils.TextViewBold
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/preview_address"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/button_text_size"
+                             />
+
+                        <com.finance.app.view.utils.TextViewNormal
+                            android:id="@+id/tvAddress"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <include layout="@layout/line_separator" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.finance.app.view.utils.TextViewBold
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/preview_landmark"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/button_text_size"
+                             />
+
+                        <com.finance.app.view.utils.TextViewNormal
+                            android:id="@+id/tvLandmark"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <include layout="@layout/line_separator" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.finance.app.view.utils.TextViewBold
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/preview_contact"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/button_text_size"
+                             />
+
+                        <com.finance.app.view.utils.TextViewNormal
+                            android:id="@+id/tvContact"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <include layout="@layout/line_separator" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.finance.app.view.utils.TextViewBold
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/preview_pin_code"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/button_text_size"
+                             />
+
+                        <com.finance.app.view.utils.TextViewNormal
+                            android:id="@+id/tvPincode"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <include layout="@layout/line_separator" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.finance.app.view.utils.TextViewBold
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/preview_state"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/button_text_size"
+                             />
+
+                        <com.finance.app.view.utils.TextViewNormal
+                            android:id="@+id/tvState"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/text_size" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/line_separator" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.finance.app.view.utils.TextViewBold
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/preview_district"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/button_text_size"
+                             />
+
+                        <com.finance.app.view.utils.TextViewNormal
+                            android:id="@+id/tvDistrict"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/text_size" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/line_separator" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.finance.app.view.utils.TextViewBold
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/preview_city"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/button_text_size"
+                             />
+
+                        <com.finance.app.view.utils.TextViewNormal
+                            android:id="@+id/tvCity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textSize="@dimen/text_size" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </ScrollView>
+    </LinearLayout>
+</layout>

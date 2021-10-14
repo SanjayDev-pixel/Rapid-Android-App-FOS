@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/fields_margin"
+            android:padding="@dimen/margin_10"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/otp_heading"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textSize="@dimen/button_text_size" />
+
+            <TextView
+                android:id="@+id/tvMobile_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textSize="@dimen/button_text_size"
+                android:layout_marginTop="@dimen/margin5dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvMobileno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:textSize="@dimen/button_text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40sp"
+                android:text="Enter OTP"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin10dp"
+                android:gravity="center" />
+
+            <com.alimuzaffar.lib.pin.PinEntryEditText
+                android:id="@+id/etOTP"
+                android:layout_width="150dp"
+                android:layout_height="50sp"
+                android:cursorVisible="true"
+                android:inputType="number"
+                android:layoutDirection="ltr"
+                android:maxLength="4"
+                android:layout_marginTop="@dimen/margin10dp"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/button_text_size"
+                android:textColor="@color/black"
+                app:pinLineStrokeSelected="2dp"
+                app:pinTextBottomPadding="@dimen/margin_10"
+                android:layout_marginEnd="10sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvResendOTPTimeLeftInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_20"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/small_text_size"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/lllayout_resend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/donotrecieveotp"
+                android:textColor="@color/black"
+                android:gravity="end"
+                android:textSize="@dimen/text_size"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvResendOTP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/resend_otp"
+                android:textSize="@dimen/text_size"
+                android:gravity="start|center"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/verifyotp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:background="@color/greenbutton"
+                android:text="@string/verify"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_marginEnd="10dp" />
+
+            <Button
+                android:id="@+id/ivCross"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="@string/later"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:background="@color/colorPrimary"
+                android:layout_marginStart="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

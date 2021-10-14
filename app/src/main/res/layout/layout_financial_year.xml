@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/margin_10"
+                android:background="@color/theme_light_blue"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size"
+                android:text="FINANCIAL YEAR(ITR)"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="@dimen/text_size"
+                android:text="Financial Year" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2017-18" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size"
+                android:gravity="center"
+                android:text="2016-17" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="2015-16"
+                />
+
+        </TableRow>
+
+        <TableRow android:layout_marginTop="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Turnover"
+                />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Enter Amount"
+                android:textSize="@dimen/small_text_size" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Enter Amount"
+                android:textSize="@dimen/small_text_size" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Enter Amount"
+                android:textSize="10dp" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="start"
+                android:text="Net Profit"
+                />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:hint="Enter Amount"
+                android:textSize="@dimen/small_text_size" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Enter Ammount"
+                android:textColor="@color/black"
+                android:textSize="@dimen/small_text_size" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:hint="Enter Ammount"
+                android:textSize="@dimen/small_text_size" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Date Of ITR Filling" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Enter Amount"
+                android:textSize="@dimen/small_text_size" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:hint="Enter Amount"
+                android:textSize="@dimen/small_text_size" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Enter Amount"
+                android:textColor="@color/black"
+                android:textSize="@dimen/small_text_size" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="start"
+                android:text="Depreciation"
+                />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:hint="Enter Amount"
+                android:textSize="@dimen/small_text_size" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:hint="Enter Amount"
+                android:textSize="@dimen/small_text_size" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:hint="Enter Amount"
+                android:textSize="@dimen/small_text_size" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:text="Other Income"
+                />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:hint="Enter Amount"
+                android:textSize="@dimen/small_text_size" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Enter Amount"
+                android:textSize="@dimen/small_text_size" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Enter Amount"
+                android:textSize="@dimen/small_text_size" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Household Expense"
+                />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:hint="Enter Amount"
+                android:textSize="@dimen/small_text_size" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:hint="Enter Amount"
+                android:textSize="@dimen/small_text_size" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:hint="Enter Amount"
+                android:textSize="@dimen/small_text_size" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="NET INCOME" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="Rs.500000"
+                android:textSize="@dimen/small_text_size" />
+        </TableRow>
+    </TableLayout>
+</layout>

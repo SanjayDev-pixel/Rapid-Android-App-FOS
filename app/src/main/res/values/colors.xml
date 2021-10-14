@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#003E82</color>
+    <color name="colorPrimary">#003E82</color>
+    <color name="colorPrimaryLight">#425b6f</color>
+    <color name="colorAccent">#003E82</color>
+    <color name="spinner_hint_text_color">#ffffcc</color>
+<!--    <color name="hint_color">#05396c  585858</color>-->
+    <color name="hint_color">#495057</color>
+    <color name="text_color">#495057</color>
+    <color name="spinner_base_color">#44000000</color>
+    <color name="gradientColorPrimary">#9013334C</color>
+
+    <color name="black">#000000</color>
+    <color name="app_bkg">#F9F9F9</color>
+    <color name="white">#ffffff</color>
+    <color name="bottom_sheet_background">#ffffff</color>
+    <color name="card_background">#a3e9a4</color>
+    <color name="card_upper_background">#0a8f08</color>
+
+    <color name="toolbar_background_color">#acacac</color>
+
+    <color name="divider">#acacac</color>
+    <color name="divider_light">@color/md_grey_300</color>
+
+    <color name="theme_text_color">#6d6d6d</color>
+    <color name="record_activity">#26444B</color>
+    <color name="theme_color_error_text">@color/md_red_800</color>
+    <color name="theme_color_cards">#F7EFE4</color>
+    <color name="theme_text_heading">#424243</color>
+    <color name="foreground_material_light">#cfa6a6</color>
+    <color name="primary_material_light">#4caf50</color>
+    <color name="primary_dark_material_light">#28782c</color>
+    <color name="gradient_black">#85000000</color>
+
+    <color name="error_text">#c41411</color>
+    <color name="heading_background">#D6EAF8</color>
+    <color name="download_color_failure">@color/divider</color>
+    <color name="download_color_success">@color/md_green_800</color>
+
+
+    <color name="web_link">@color/md_blue_500</color>
+    <color name="theme_light_blue">#7198EC</color>
+  <color name="greenbutton">#1db427</color>
+
+
+    <color name="black_242424">#242424</color>
+    <color name="grey_585858">#585858</color>
+  <color name="background_color">#f9f9f9</color>
+
+
+    <color name="lead_status_new">#003E82</color>
+    <color name="lead_status_rejected">#C8060C</color>
+    <color name="lead_status_pending">#EECB1C</color>
+    <color name="lead_status_submitted">#1DB427</color>
+    <color name="lead_status_extra">#BB323B</color>
+    <color name="dialogBackground">#60000000</color>
+    <color name="labels">#053C6D</color>
+    <color name="black_new_1">#ff373a43</color>
+    <color name="black_new_2">#ff121313</color>
+    <color name="black_new_3">#ff383838</color>
+    <color name="black_new_4">#ff4b4f5b</color>
+    <color name="myPrimaryColor">#053C6D</color>
+    <color name="stroke">#ffc8d0ef</color>
+
+
+    <color name="colorText">#000111</color>
+    <color name="colorWhite">#FFFFFF</color>
+</resources>

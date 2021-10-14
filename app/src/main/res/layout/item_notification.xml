@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lead_card_height"
+        android:padding="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_10"
+        android:id="@+id/leadCard"
+        card:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/md_blue_300">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvLead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Lead : "
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:id="@+id/tvLeadNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="1122362"
+                        android:textSize="@dimen/small_text_size" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvLeadTime"
+                    android:layout_gravity="end"
+                    android:layout_width="match_parent"
+                    android:gravity="center|end"
+                    android:layout_height="wrap_content"
+                    android:text="5 min ago"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/small_text_size" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLeadStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="5sp"
+                android:text="Application has been rejected"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tvLeadNotificationDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textColor="@color/black"
+                android:layout_marginTop="5sp"
+                android:text="Apajba daljdb fjab jadhfajbna aiobaub ao boabfcoabfjb  jabhjaoba baodaobfha bhoabca jab aohdboahbfoadb ahbcabh  been rejected"
+                android:textSize="@dimen/small_text_size" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Application Number : "
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/tvApplicationNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="1122362"
+                    android:textSize="@dimen/small_text_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
+

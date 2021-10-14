@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:minWidth="500dp"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_close_black_48dp" />
+
+                <com.finance.app.view.utils.TextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Reference Detail"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:textColorHint="@color/grey_585858">
+
+                <com.finance.app.view.utils.EditTexNormal
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:inputType="textCapWords"
+                    android:minWidth="200dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/spinnerRelation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:textSize="@dimen/text_size"
+                android:theme="@style/MatchSpinnerTheme"
+                app:ms_arrowColor="@color/black"
+                app:ms_arrowSize="@dimen/text_size"
+                app:ms_floatingLabelColor="@color/hint_color"
+                app:ms_floatingLabelText="Relation *"
+                app:ms_hint="Relation *"
+                app:ms_hintColor="@color/hint_color"
+                app:ms_hintTextSize="@dimen/hint_size"
+                app:ms_multiline="false" />
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/spinnerOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:textSize="@dimen/text_size"
+                android:theme="@style/MatchSpinnerTheme"
+                app:ms_arrowColor="@color/black"
+                app:ms_arrowSize="@dimen/text_size"
+                app:ms_floatingLabelColor="@color/hint_color"
+                app:ms_floatingLabelText="Occupation *"
+                app:ms_hint="Occupation *"
+                app:ms_hintColor="@color/hint_color"
+                app:ms_hintTextSize="@dimen/hint_size"
+                app:ms_multiline="false" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_known_since"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:textColorHint="@color/grey_585858">
+
+                <com.finance.app.view.utils.EditTexNormal
+                    android:id="@+id/etKnownSince"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/known_since_in_years"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:minWidth="200dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <include
+                android:id="@+id/referenceAddressLayout"
+                layout="@layout/layout_employment_address_grey_hints" />
+
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
+                android:text="@string/add" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

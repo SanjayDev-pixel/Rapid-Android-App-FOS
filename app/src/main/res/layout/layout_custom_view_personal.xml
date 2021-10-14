@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:paddingBottom="50dp"
+            android:fillViewport="true">
+            <LinearLayout
+                android:id="@+id/llPersonalFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:padding="@dimen/margin_10">
+
+                <com.finance.app.view.customViews.KycFormView
+                    android:id="@+id/kycApplicant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAddKYC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/performKyc"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text_size"
+                    android:alpha=".75"
+                    />
+                <Button
+                    android:id="@+id/btnKyclist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:text="Fetch KYC"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text_size"
+                    android:alpha=".75"/>
+
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btnUploadKycDocument"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorPrimary"
+                    android:drawableLeft="@drawable/ic_file_upload_white_24dp"
+                    android:drawablePadding="10dp"
+                    android:padding="5sp"
+                    android:text="KYC Document"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:alpha="0.75"/>
+
+
+                <include
+                    android:id="@+id/basicInfoLayout"
+                    layout="@layout/layout_basic_detail" />
+
+                <include
+                    android:id="@+id/personalAddressLayout"
+                    layout="@layout/layout_personal_address" />
+
+            </LinearLayout>
+
+        </ScrollView>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+</layout>

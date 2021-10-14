@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnTemp1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button 1" />
+
+        <com.finance.app.view.customViews.CustomPersonalInfoView
+            android:id="@+id/cvPersonalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</layout>

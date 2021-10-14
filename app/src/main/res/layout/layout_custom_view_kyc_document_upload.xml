@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clipToPadding="false"
+
+        android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/vwIncomeNotConsider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.finance.app.view.utils.TextViewNormal
+                        android:layout_width="wrap_content"
+                        android:id="@+id/txtKycScore"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Fetching KYC Score"
+                        android:textSize="21sp" />
+                   <!-- <com.agrawalsuneet.dotsloader.loaders.TashieLoader
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dottedProgressBar"
+                        app:tashieloader_animDelay="200"
+                        android:visibility="gone"
+                        app:tashieloader_animDur="1000"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_gravity="center"
+                        app:tashieloader_dotsColor="@color/blue_spinner"
+                        app:tashieloader_dotsDist="7dp"
+                        app:tashieloader_dotsRadius="10dp"
+                        app:tashieloader_interpolator="@android:anim/accelerate_interpolator"
+                        app:tashieloader_noOfDots="4" />-->
+                </LinearLayout>
+
+              <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+                    <com.finance.app.view.utils.TextViewNormal
+                android:layout_width="wrap_content"
+                android:id="@+id/txtName"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:text="Name"
+                android:layout_gravity="center"
+                android:textSize="21sp" />
+             </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/manualGuide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="5dp"
+                 android:layout_below="@+id/vwIncomeNotConsider"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearSecondcard"
+                    android:orientation="vertical">
+
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="match_parent"
+                        android:id="@+id/txtHeading"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Everything you need to know about KYC Document Upload"
+                        android:layout_gravity="center"
+                        android:textSize="21sp" />
+                    <com.finance.app.view.utils.TextViewNormal
+                        android:layout_width="match_parent"
+                        android:id="@+id/txtStep1"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:text="As per your KYC Score you have to upload following documents."
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/_10sdp" />
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="match_parent"
+                        android:id="@+id/txtDoc1"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="1. Original KYC"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/_10sdp" />
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="match_parent"
+                        android:id="@+id/txtDoc2"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="2. Customer Selfie with KYC"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/_10sdp" />
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="match_parent"
+                        android:id="@+id/txtDoc3"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="3. Customer self-attested KYC"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/_10sdp" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:id="@+id/btnUploadNow"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/blue_spinner"
+                        android:text="Upload Document"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+    </ScrollView>
+</layout>

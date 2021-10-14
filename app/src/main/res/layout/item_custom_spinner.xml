@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <com.finance.app.view.utils.TextViewBold
+            android:id="@+id/tvSpinnerValue"
+            style="@style/spinner_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/verify"
+            android:text="@string/verify"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size" />
+
+    </LinearLayout>
+</layout>

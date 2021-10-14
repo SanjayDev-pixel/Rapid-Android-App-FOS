@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/layout_header_with_back_btn" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent">
+
+            <com.finance.app.view.utils.TextViewBold
+                android:id="@+id/applicant_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:text="Name"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.finance.app.view.utils.TextViewNormal
+                android:id="@+id/tvDesignation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="left|center"
+                android:layout_marginTop="5dp"
+                android:gravity="right"
+                android:paddingRight="20dp"
+                android:text="Applicant"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <com.finance.app.view.utils.TextViewNormal
+                android:id="@+id/tvMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/applicant_name"
+                android:layout_gravity="left|center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="right"
+                android:paddingLeft="20dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_10"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/collapseImageView"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:src="@drawable/collapse_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/loan_application"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size" />
+        </LinearLayout>
+
+
+        <include
+            android:id="@+id/mainLoanLayout"
+            layout="@layout/activity_main_loan" />
+    </LinearLayout>
+</layout>

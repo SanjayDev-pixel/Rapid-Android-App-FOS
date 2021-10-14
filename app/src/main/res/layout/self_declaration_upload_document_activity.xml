@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLayoutDocument"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.finance.app.view.activity.SelfDeclarationUploadDocumentActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/header"
+                layout="@layout/layout_back_self_declaration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:paddingRight="10dp">
+
+
+                <fr.ganfra.materialspinner.MaterialSpinner
+                    android:id="@+id/spinnerDocumentType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"
+                    android:textSize="@dimen/button_text_size"
+                    app:ms_arrowColor="@color/black"
+                    app:ms_arrowSize="16dp"
+                    app:ms_floatingLabelColor="@color/hint_color"
+                    app:ms_floatingLabelText="Select Document Type *"
+                    app:ms_hint="Select Document Type *"
+                    app:ms_hintColor="@color/hint_color"
+                    app:ms_hintTextSize="@dimen/hint_size"
+                    app:ms_multiline="false" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_document_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="@color/hint_color"
+                    >
+
+                    <com.finance.app.view.utils.EditTexNormal
+                        android:id="@+id/etDocumentName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Document Name"
+                        android:singleLine="true"
+                        app:ms_hintTextSize="@dimen/hint_size"
+                        android:inputType="none"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnPickFile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:drawablePadding="10dp"
+                        android:padding="5sp"
+                        android:text="Take Photo"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/btnUpload"
+                        android:layout_width="0dp"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:drawableStart="@drawable/ic_file_upload_white_24dp"
+                        android:drawablePadding="10dp"
+                        android:padding="5sp"
+                        android:text="Upload Now"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                    <Button
+                        android:id="@+id/btnCheckDocumentStatus"
+                        android:layout_width="0dp"
+                        android:visibility="visible"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+
+                        android:padding="5sp"
+                        android:text="Document Status"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+
+                <com.finance.app.view.utils.TextViewNormal
+                    android:id="@+id/tvFileSizeErrorLabel"
+                    android:layout_width="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="File is must not be greater than 5 MB!"
+                    android:textColor="@color/md_red_500" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/black_242424" />
+
+            <com.finance.app.view.utils.TextViewBold
+                android:id="@+id/tvLabelTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:textColor="@color/black_242424"
+                android:textSize="21sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvUploadedDocumentList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_uploded_document" />
+
+
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

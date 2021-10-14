@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llLogout"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_10">
+
+            <ImageView
+                android:id="@+id/ivItemIcon"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_marginStart="30sp"
+                android:src="@drawable/logout" />
+
+            <com.finance.app.view.utils.TextViewNormal
+                android:id="@+id/tvItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:text="@string/logout"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <include layout="@layout/line_seperator" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/drawer_gradient_color"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/title"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@android:color/transparent"
+            android:drawableStart="@mipmap/boss"
+            android:drawablePadding="@dimen/margin_20"
+            android:gravity="start"
+            android:padding="@dimen/margin_10"
+            android:text="Personal info"
+            android:textAllCaps="false"
+            android:textColor="@drawable/button_select"
+            android:textSize="@dimen/text_menu_size" />
+    </LinearLayout>
+</layout>

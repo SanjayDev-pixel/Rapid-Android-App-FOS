@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_220sdp"
+        android:layout_margin="@dimen/margin_10"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/margin5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:padding="@dimen/margin_10"
+                android:orientation="vertical"
+                android:layout_weight="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Loan Ownership : "
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/black_242424"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/margin10dp" />
+
+                    <com.finance.app.view.utils.TextViewNormal
+                        android:id="@+id/tvLoanOwnership"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Joint"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin10dp">
+
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Obligate : "
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/black_242424"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/margin10dp" />
+
+                    <com.finance.app.view.utils.TextViewNormal
+                        android:id="@+id/tvObligate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Yes"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin10dp">
+
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Loan Type : "
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/black_242424"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/margin10dp" />
+
+                    <com.finance.app.view.utils.TextViewNormal
+                        android:id="@+id/tvLoanType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Personal Loan"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin10dp">
+
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Financer : "
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/black_242424"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/margin10dp" />
+
+                    <com.finance.app.view.utils.TextViewNormal
+                        android:id="@+id/tvFinancerName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="DMI"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin10dp">
+
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Loan Amount : "
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/black_242424"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/margin10dp" />
+
+                    <com.finance.app.view.utils.TextViewNormal
+                        android:id="@+id/tvLoanAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="4000000"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_242424"
+                        android:text="Tenure : "
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+
+                    <com.finance.app.view.utils.TextViewNormal
+                        android:id="@+id/tvTenure"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="12"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_242424"
+                        android:text="Balance Tenure : "
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+
+                    <com.finance.app.view.utils.TextViewNormal
+                        android:id="@+id/tvBalanceTenure"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="400213"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_242424"
+                        android:text="EMI : "
+
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+
+                    <com.finance.app.view.utils.TextViewNormal
+                        android:id="@+id/tvEMI"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="12000"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_242424"
+                        android:text="@string/num_of_check_bounces_in_last_6_months"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+
+                    <com.finance.app.view.utils.TextViewNormal
+                        android:id="@+id/tvNumOfBouncesInSixMonths"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="left"
+                        android:text="5"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_242424"
+                        android:text="@string/num_of_check_bounces_in_last_9_months"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+
+                    <com.finance.app.view.utils.TextViewNormal
+                        android:id="@+id/tvNumOfBouncesInNineMonths"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="5"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_242424"
+                        android:text="@string/loan_a_c_num"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+
+                    <com.finance.app.view.utils.TextViewNormal
+                        android:id="@+id/tvLoanAcNum"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="3215461303126"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_242424"
+                        android:text="Repayment Bank"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+
+                    <com.finance.app.view.utils.TextViewNormal
+                        android:id="@+id/tvRepaymentBank"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:gravity="left"
+                        android:text="N/A"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_242424"
+                        android:text="EMI paid in same month : "
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+
+                    <com.finance.app.view.utils.TextViewNormal
+                        android:id="@+id/tvEmiPaid"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Yes"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.finance.app.view.utils.TextViewBold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_242424"
+                        android:text="Disbursement Date : "
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+
+                    <com.finance.app.view.utils.TextViewNormal
+                        android:id="@+id/tvDisbursementDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="12/9/19"
+                        android:textSize="@dimen/text_size"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="vertical"
+                android:layout_weight="8">
+
+                <ImageView
+                    android:id="@+id/btnEditNew"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:padding="5sp"
+                    android:layout_margin="@dimen/margin_10"
+                    android:src="@drawable/ic_edit_grey"
+                    android:layout_alignParentRight="true" />
+
+                <ImageView
+                    android:id="@+id/btnDelete"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:padding="5sp"
+                    android:layout_margin="@dimen/margin_10"
+                    android:src="@drawable/ic_delete_grey"
+                    android:layout_below="@+id/btnEditNew"
+                    android:layout_alignParentRight="true" />
+
+                <com.finance.app.view.utils.TextViewNormal
+                    android:id="@+id/btnEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:padding="5sp"
+                    android:text="@string/more"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/button_text_size"
+                    android:layout_marginRight="@dimen/margin5dp" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

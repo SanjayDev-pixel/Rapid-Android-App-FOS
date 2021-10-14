@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        tools:context=".view.activity.LoanSubmitStatusActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/md_grey_100">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivProfileBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="400sp"
+                    android:src="@color/colorPrimary" />
+
+
+                <LinearLayout
+                    android:id="@+id/lllead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="@dimen/margin_20">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lead_id"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/lead_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="6767767766"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:paddingLeft="@dimen/margin5dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!--<LinearLayout
+                    android:id="@+id/ll_leadstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:layout_margin="@dimen/margin_20">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rulebased_status"
+                        android:textSize="@dimen/text_size"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/lead_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Approved"
+                        android:textSize="@dimen/text_size"
+                        android:textColor="@color/white"
+                        android:paddingLeft="@dimen/margin5dp"/>
+
+                </LinearLayout>-->
+
+
+                <LinearLayout
+                    android:id="@+id/logo_layout"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_55sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_below="@+id/lllead"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_letterx"
+
+                        android:layout_marginTop="@dimen/margin10dp" />
+
+                    <TextView
+                        android:id="@+id/preapproved_text"
+                        android:layout_marginTop="@dimen/margin10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/margin10dp"
+                        android:text="@string/reject"
+                        android:textColor="@color/md_red_500"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/eligibility_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eligibity_text"
+                    android:textColor="@color/white"
+                    android:layout_below="@+id/logo_layout"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/margin10dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/eligibleAmount"
+                    android:layout_marginTop="@dimen/margin5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="@dimen/margin10dp"
+                    android:text="Rs: 31231312321"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/eligibility_text" />
+
+
+                <LinearLayout
+                    android:id="@+id/llstatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="@dimen/_140sdp"
+                    android:layout_marginRight="30dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin5dp"
+                                android:text="@string/tenure"
+                                android:textSize="@dimen/text_size" />
+
+                            <TextView
+                                android:id="@+id/tenure_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin5dp"
+                                android:text="5 years"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin5dp"
+                                android:text="@string/interest_rate"
+                                android:textSize="@dimen/text_size" />
+
+                            <TextView
+                                android:id="@+id/rate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin5dp"
+                                android:text="8.0%"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/md_grey_100" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin5dp"
+                                android:text="@string/emi"
+                                android:textSize="@dimen/text_size" />
+
+                            <TextView
+                                android:id="@+id/emi_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin5dp"
+                                android:text="10000/M"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin5dp"
+                                android:text="@string/current_status"
+                                android:textSize="@dimen/text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin5dp"
+                                android:text="Aligned to credit"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/md_grey_100" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin20dp"
+                        android:background="@drawable/button_theme_style"
+                        android:gravity="center"
+                        android:text="Go to Dashboard"
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_grey_100"
+                android:text="Rejection"
+                android:gravity="left|center"
+                android:textSize="@dimen/text_size"
+                android:paddingLeft="@dimen/margin10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardview"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="@dimen/margin10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@color/md_grey_200"
+                        android:text="Hitesh Verma"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/text_size"
+                        android:textColor="@color/black"
+                        android:paddingLeft="@dimen/margin10dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@color/white"
+                        android:text="Age above limit"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/text_size"
+                        android:textColor="@color/black"
+                        android:paddingLeft="@dimen/margin10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/white"
+                        android:padding="@dimen/margin10dp"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/approval_auth"
+                                android:layout_margin="@dimen/margin5dp"
+                                android:textSize="@dimen/text_size" />
+
+                            <TextView
+                                android:id="@+id/approval_authority"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CEO"
+                                android:layout_margin="@dimen/margin5dp"
+                                android:textSize="@dimen/text_size"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/mitigating_factor"
+                                android:layout_margin="@dimen/margin5dp"
+                                android:textSize="@dimen/text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="xxxxx"
+                                android:layout_margin="@dimen/margin5dp"
+                                android:textSize="@dimen/text_size"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/nextme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="Next Page" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

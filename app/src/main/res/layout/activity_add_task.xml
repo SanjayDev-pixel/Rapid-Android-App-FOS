@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView android:layout_width="match_parent"
+        android:background="@color/white"
+        xmlns:app="http://schemas.android.com/tools"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:app="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/heading_background"
+                android:text="@string/add_task"
+                android:layout_marginTop="@dimen/margin_20"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_20"
+                card_view:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+                app:cardMaxElevation="2dp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_20">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_task_subject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fields_margin"
+                        android:textColorHint="@color/hint_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etTaskSubject"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Task Subject"
+                            android:minWidth="200dp"
+                            app:ms_hintTextSize="@dimen/hint_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fields_margin"
+                        android:textColorHint="@color/hint_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Description"
+                            android:minWidth="200dp"
+                            app:ms_hintTextSize="@dimen/hint_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:id="@+id/spinnerTaskType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minWidth="@dimen/text_min_width"
+                        app:ms_arrowColor="@color/black"
+                        android:layout_marginTop="@dimen/fields_margin"
+                        app:ms_arrowSize="@dimen/arrow_size"
+                        app:ms_floatingLabelColor="@color/hint_color"
+                        app:ms_floatingLabelText="Task Type"
+                        app:ms_hint="Task Type "
+                        app:ms_hintColor="@color/hint_color"
+                        app:ms_hintTextSize="@dimen/hint_size"
+                        app:ms_multiline="false" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fields_margin"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal">
+
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/spinnerAssignee"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:minWidth="@dimen/text_min_width"
+                            app:ms_arrowColor="@color/black"
+                            app:ms_arrowSize="@dimen/arrow_size"
+                            app:ms_floatingLabelColor="@color/hint_color"
+                            app:ms_floatingLabelText="Assignee "
+                            app:ms_hint="Assignee "
+                            app:ms_hintColor="@color/hint_color"
+                            app:ms_hintTextSize="@dimen/hint_size"
+                            app:ms_multiline="false" />
+
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/spinnerAccountable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:layout_weight="1"
+                            android:minWidth="@dimen/text_min_width"
+                            app:ms_arrowColor="@color/black"
+                            app:ms_arrowSize="@dimen/arrow_size"
+                            app:ms_floatingLabelColor="@color/hint_color"
+                            app:ms_floatingLabelText="Accountable "
+                            app:ms_hint="Accountable "
+                            app:ms_hintColor="@color/hint_color"
+                            app:ms_hintTextSize="@dimen/hint_size"
+                            app:ms_multiline="false" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Documents to be collected"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:layout_marginTop="@dimen/fields_margin"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:id="@+id/spinnerDocumentType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minWidth="@dimen/text_min_width"
+                        app:ms_arrowColor="@color/black"
+                        android:layout_marginTop="@dimen/fields_margin"
+                        app:ms_arrowSize="@dimen/arrow_size"
+                        app:ms_floatingLabelColor="@color/hint_color"
+                        app:ms_floatingLabelText="Document Type "
+                        app:ms_hint="Document Type "
+                        app:ms_hintColor="@color/hint_color"
+                        app:ms_hintTextSize="@dimen/hint_size"
+                        app:ms_multiline="false" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fields_margin"
+                        android:textColorHint="@color/hint_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etRemarks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Remarks"
+                            android:minWidth="200dp"
+                            app:ms_hintTextSize="@dimen/hint_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btnCreate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:layout_gravity="center"
+
+                        android:text="@string/create" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

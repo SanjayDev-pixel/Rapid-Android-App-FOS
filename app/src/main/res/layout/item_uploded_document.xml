@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttr="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/leadCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        customAttr:cardBackgroundColor="@android:color/white"
+        customAttr:cardCornerRadius="5dp"
+        customAttr:cardElevation="4dp"
+        customAttr:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/ivDelete"-->
+                <!--                    android:layout_width="20dp"-->
+                <!--                    android:layout_height="20dp"-->
+                <!--                    android:layout_marginEnd="10dp"-->
+                <!--                    android:visibility="invisible"-->
+                <!--                    android:src="@drawable/ic_delete_grey" />-->
+
+                <ImageView
+                    android:id="@+id/ivDownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_file_download_24dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.finance.app.view.utils.TextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:text="Document Type "
+                    android:textColor="@color/black_242424"
+                    android:textSize="20sp"
+                   />
+
+                <com.finance.app.view.utils.TextViewNormal
+                    android:id="@+id/tvDocType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="19sp"
+                    tools:text="PAN" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <com.finance.app.view.utils.TextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Document Name "
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/black_242424"
+                    android:textSize="20sp" />
+
+                <com.finance.app.view.utils.TextViewNormal
+                    android:id="@+id/tvDocName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="19sp"
+                    tools:text="Pan Card ghgghhgghgggghghghhghjghgkjgjhghjghjghjghjghj sadgahgdhafdghfahgdfhgfdhgfdghfs" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

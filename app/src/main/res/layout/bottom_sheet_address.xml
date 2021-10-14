@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_menu_action"
+    android:visibility="visible"
+    android:background="@drawable/app_color_grideant"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:behavior_peekHeight="@dimen/_200sdp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <ImageView
+        android:id="@+id/menu_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_alignParentRight="true"
+        android:visibility="visible"
+        app:layout_collapseMode="parallax"
+        app:srcCompat="@drawable/ic_menu_cross"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/white"
+        android:id="@+id/txtHeading"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="Journey Details"
+        android:fontFamily="@font/poppins_bold" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/top_2_corner_white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/txtHeading">
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="@dimen/_10sdp"
+           android:orientation="vertical"
+           android:id="@+id/rvEmplyeeAddress"
+           app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+           ></androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

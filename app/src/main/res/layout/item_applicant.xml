@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tvApplicants"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:textColor="@color/black"
+        android:text=""
+        android:textSize="14sp"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:background="@drawable/unselected_applicant_tab"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+</layout>

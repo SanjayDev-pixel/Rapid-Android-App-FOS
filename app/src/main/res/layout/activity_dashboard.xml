@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/main_page_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:background="@color/md_red_300"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/margin_10">
+
+                <TextView
+                    android:id="@+id/tvVersionName"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="@color/black"
+                    android:text="@string/add"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    android:id="@+id/progressFiles"
+                    layout="@layout/progress_chart" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:paddingTop="5sp"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:background="@color/colorPrimary"
+                android:paddingStart="@dimen/main_page_padding"
+                android:paddingEnd="@dimen/main_page_padding">
+
+                <Spinner
+                    android:id="@+id/spinnerModule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:spinnerMode="dropdown" />
+
+                <Spinner
+                    android:id="@+id/spinnerSlot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_alignParentEnd="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:spinnerMode="dropdown" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/main_page_padding">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/button_text_size"
+                        android:text="@string/login_overview" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutShortfall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/layoutAchieved"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="12sp"
+                            android:layout_height="12sp"
+                            android:layout_marginEnd="@dimen/margin_10"
+                            android:src="@drawable/circle_drawable"
+                            android:tint="@color/md_blue_grey_100" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="@string/shortfall" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutAchieved"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="15sp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="12sp"
+                            android:layout_height="12sp"
+                            android:layout_marginEnd="@dimen/margin_10"
+                            android:src="@drawable/circle_drawable"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="@string/achieved" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_20">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/files"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size" />
+
+                </RelativeLayout>
+
+                <include layout="@layout/line_seperator" />
+
+                <RelativeLayout
+                    android:id="@+id/layoutVolume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20">
+
+                    <TextView
+                        android:id="@+id/tvVolume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="@string/volume"
+                        android:textSize="@dimen/text_size" />
+
+                    <include
+                        android:id="@+id/progressVolume"
+                        layout="@layout/progress_chart" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/margin_50"
+                    android:background="@color/md_grey_700"
+                    android:padding="@dimen/margin_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:textSize="@dimen/text_size"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:text="@string/files" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/text_size"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="@string/volume_in_lakh" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutChartData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/padding_10">
+
+                        <TextView
+                            android:id="@+id/tvTarget"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size"
+                            android:layout_weight="3"
+                            android:text="@string/target" />
+
+                        <TextView
+                            android:id="@+id/tvTargetFiles"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size"
+                            android:layout_weight="2"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvTargetVolume"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_weight="3"
+                            android:textSize="@dimen/text_size"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/line_seperator" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/padding_10">
+
+                        <TextView
+                            android:id="@+id/tvAchieved"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size"
+                            android:layout_weight="3"
+                            android:text="@string/achieved" />
+
+                        <TextView
+                            android:id="@+id/tvAchievedFiles"
+                            android:textSize="@dimen/text_size"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvAchievedVolume"
+                            android:layout_width="wrap_content"
+                            android:textSize="@dimen/text_size"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_weight="3"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/line_seperator" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/padding_10">
+
+                        <TextView
+                            android:id="@+id/tvPercentAchieved"
+                            android:layout_width="0sp"
+                            android:textSize="@dimen/text_size"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_weight="3"
+                            android:text="@string/percent_achieved" />
+
+                        <TextView
+                            android:id="@+id/tvPercentAchievedFiles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size"
+                            android:layout_weight="2"
+                            android:textColor="@color/black"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvPercentAchievedVolume"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size"
+                            android:textColor="@color/black"
+                            android:layout_weight="3"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/line_seperator" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/padding_10">
+
+                        <TextView
+                            android:id="@+id/tvPercentShortfall"
+                            android:layout_width="0sp"
+                            android:textSize="@dimen/text_size"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:textColor="@color/black"
+                            android:text="@string/shortage" />
+
+                        <TextView
+                            android:id="@+id/tvPercentShortfallFiles"
+                            android:textSize="@dimen/text_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_weight="2"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvPercentShortfallVolume"
+                            android:layout_width="wrap_content"
+                            android:textSize="@dimen/text_size"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_weight="3"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/rl_capture"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="FaceAuthWithImageId"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_bold" />
+        <TextView android:textSize="@dimen/_12sdp"
+            android:textColor="@android:color/black"
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/doc_review_info"
+            android:layout_below="@+id/tv_title"
+            android:layout_centerHorizontal="true" android:fontFamily="@font/poppins_regular" android:textAlignment="center" />
+
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_review" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:visibility="invisible" android:textSize="@dimen/_16sdp" android:text="Sanjay" android:textColor="@android:color/black" android:id="@+id/tv_review" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_20sdp" android:layout_centerHorizontal="true" android:fontFamily="@font/poppins_semibold" />
+        <TextView android:textSize="@dimen/_12sdp" android:text="Sawan" android:visibility="invisible" android:textColor="@android:color/black" android:id="@+id/tv_review_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_20sdp" android:layout_below="@+id/tv_review" android:layout_centerHorizontal="true" android:fontFamily="@font/poppins_regular" android:textAlignment="center" />
+        <FrameLayout android:id="@+id/captured_frame"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_review_info"
+            android:layout_above="@+id/upload_btn_l"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/splash_background"
+                android:scaleType="centerCrop"
+                />
+
+        </FrameLayout>
+
+        <LinearLayout android:id="@+id/upload_btn_l" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/_20sdp" android:layout_alignParentBottom="true">
+            <Button android:textSize="@dimen/_12sdp" android:textColor="@color/labels" android:id="@+id/btn_retake" android:background="@drawable/blue_btn_round_edge" android:layout_width="0.0dip" android:layout_height="@dimen/_40sdp" android:layout_marginRight="@dimen/_10sdp" android:text="@string/text_retake" android:layout_weight="1.0" android:fontFamily="@font/roboto_medium" android:layout_marginEnd="@dimen/_10sdp" style="?android:borderlessButtonStyle" />
+
+            <Button
+                android:id="@+id/btn_use"
+                style="?android:borderlessButtonStyle"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_weight="1.0"
+                android:background="@drawable/blue_btn_round"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/text_use_this_photo"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/_10sdp" android:textColor="@android:color/black" android:id="@+id/customer_confirmation_msg" android:paddingLeft="@dimen/_8sdp" android:paddingRight="@dimen/_8sdp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/please_confirm_correct_info" android:layout_above="@+id/upload_btn_l" android:layout_centerHorizontal="true" android:fontFamily="@font/poppins_regular" android:textAlignment="center" />
+    </RelativeLayout>
+</RelativeLayout>
+

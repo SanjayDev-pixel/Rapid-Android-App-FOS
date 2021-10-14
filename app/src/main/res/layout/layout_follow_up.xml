@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/spinnerLeadType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:minWidth="@dimen/text_min_width"
+                android:textSize="@dimen/text_size"
+                app:ms_arrowColor="@color/grey_585858"
+                android:theme="@style/MatchSpinnerTheme"
+                app:ms_arrowSize="@dimen/arrow_size"
+                app:ms_floatingLabelColor="@color/hint_color"
+                app:ms_floatingLabelText="Lead Type *"
+                app:ms_hint="Lead Type *"
+                app:ms_hintColor="@color/hint_color"
+                app:ms_hintTextSize="@dimen/hint_size"
+                app:ms_multiline="false" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_follow_up_timing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:textColorHint="@color/md_grey_700">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFollowUpTiming"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_calender"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="Follow Up Timing"
+                    android:minWidth="150dp"
+                    android:textSize="@dimen/text_size" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_write_message"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fields_margin"
+                android:textColorHint="@color/md_grey_700">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:hint="Write Message"
+                    android:maxLines="5"
+                    android:minWidth="200dp"
+                    android:minLines="5"
+                    app:ms_hintTextSize="@dimen/hint_size" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnUpdateFollowUpLead"
+                style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorAccent"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/update_lead"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
